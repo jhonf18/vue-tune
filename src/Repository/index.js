@@ -4,7 +4,7 @@ const ROOT_API = 'https://api.deezer.com';
 
 export default class Repository {
   async getDiscoverMusic() {
-    const result = await Axios.get(`${ROOT_API}/chart/O/tracks?index=0&limit=5`);
+    const result = await Axios.get(`${ROOT_API}/chart/O/tracks?index=0&limit=5&output=jsonp`);
     return result.data.data;
   }
   
