@@ -1,6 +1,6 @@
 import Axios from 'axios';
 
-const ROOT_API = 'http://api.deezer.com';
+const ROOT_API = 'https://api.deezer.com';
 
 export default class Repository {
   async getDiscoverMusic() {
