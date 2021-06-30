@@ -1,6 +1,6 @@
 <template>
-  <aside class="menu">
-    <Logo />
+  <aside class="menu" @mouseover="hover = true" @mouseleave="hover = false">
+    <Logo :hover="hover" />
     <nav class="nav">
       <ul>
         <li 
@@ -47,7 +47,8 @@ export default {
           classLogo: 'fa fa-search',
           name: 'Buscar'
         },
-      ]
+      ],
+      hover: false
     }
   },
   methods: {

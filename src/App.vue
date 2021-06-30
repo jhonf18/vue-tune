@@ -10,10 +10,10 @@
 
 <script>
 import Menu from './components/Menu.vue'
-import Discover from './components/Discover.vue'
-import Search from './components/Search.vue'
-import Radio from './components/Radio.vue'
-import Genres from './components/Genres.vue'
+import Discover from './pages/Discover.vue'
+import Search from './pages/Search.vue'
+import Radio from './pages/Radio.vue'
+import Genres from './pages/Genres.vue'
 import Player from './components/Player.vue'
 
 export default {

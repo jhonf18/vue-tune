@@ -1,7 +1,10 @@
 <template>
   <div>
     <transition name="bounce">
-      <div v-if="searchInitial" class="container-search full-screen">
+      <div
+        key="search-initial" 
+        v-if="searchInitial" 
+        class="container-search full-screen">
         <form @submit.prevent="onSearch">
           <input 
             type="text"
@@ -9,7 +12,7 @@
             placeholder="Presione enter para buscar ..." class="input">
         </form>
       </div>
-      <div v-else>
+      <div v-else key="search">
         <div class="container-search pt">
           <form  @submit.prevent="onSearch">
             <input 
@@ -44,7 +47,6 @@ import CardTracks from '@/components/CardTrack'
 import Spinner from '@/components/Spinner'
 import Repository from '@/Repository'
 
-
 export default {
   name: 'Search',
   components: {
@@ -75,22 +77,23 @@ export default {
 
 <style scoped>
 .bounce-enter-active {
-  animation: bounce-in .5s;
+  animation: bounce-in .6s;
 }
 .bounce-leave-active {
-  animation: bounce-in .5s reverse;
+  animation: bounce-in .6s reverse;
 }
 @keyframes bounce-in {
   0% {
     transform: scale(0);
   }
   50% {
-    transform: scale(1.5);
+    transform: scale(1.15);
   }
   100% {
     transform: scale(1);
   }
 }
+
 .input {
   padding: .6em 1em;
   border-radius: 5px;
